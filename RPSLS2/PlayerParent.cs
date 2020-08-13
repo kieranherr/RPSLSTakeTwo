@@ -13,6 +13,7 @@ namespace RPSLS2
         public string choice2 = "";
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
+        public bool humanOrCPU = true; //true = human false = cpu
 
         public PlayerParent()
         {
@@ -31,6 +32,20 @@ namespace RPSLS2
         {
             Computer computer = new Computer();
             choice2 = computer.CPUChoose();
+        }
+        public bool PlayerTypeChoice()
+        {
+            Console.WriteLine("Would you like to play against another human or against a computer?");
+            string ans = Console.ReadLine();
+            if(ans == "human" || ans == "Human")
+            {
+                humanOrCPU = true;
+            }
+            else if (ans == "CPU" || ans == "cpu" || ans == "Cpu")
+            {
+                humanOrCPU = false;
+            }
+            return humanOrCPU;
         }
     }
 }
