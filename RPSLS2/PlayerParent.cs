@@ -10,6 +10,7 @@ namespace RPSLS2
     {
         public List<string> moves = new List<string>();
         public string choice = "";
+        public string choice2 = "";
         public int playerOneScore = 0;
         public int playerTwoScore = 0;
 
@@ -21,7 +22,15 @@ namespace RPSLS2
             moves.Add("Lizard");
             moves.Add("Spock");
         }
-        
-        
+        public void HumanChoice()
+        {
+            Human human = new Human();
+            choice = human.Choose();
+        }
+        public void CPUChoice()
+        {
+            Computer computer = new Computer();
+            choice2 = computer.CPUChoose();
+        }
     }
 }

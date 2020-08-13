@@ -13,7 +13,7 @@ namespace RPSLS2
         public string CPUChoose()
         {
             int num = rnd.Next(5);
-            string choice = moves[5];
+            string choice = moves[num];
             return choice;
         }
     }
