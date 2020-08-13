@@ -13,7 +13,6 @@ namespace RPSLS2
 
         public string Choose()
         {
-            
             moves.ForEach(Console.WriteLine);
             Console.WriteLine("What move would you like to throw?");
             choice = Console.ReadLine();

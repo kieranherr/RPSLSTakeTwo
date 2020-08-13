@@ -8,5 +8,13 @@ namespace RPSLS2
 {
     class Computer : PlayerParent
     {
+        private Random rnd = new Random();
+
+        public string CPUChoose()
+        {
+            int num = rnd.Next(5);
+            string choice = moves[5];
+            return choice;
+        }
     }
 }
