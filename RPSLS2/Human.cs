@@ -9,12 +9,11 @@ namespace RPSLS2
 {
     class Human : PlayerParent
     {
-        string choiceHuman;
         public override void ChooseGesture()
         {
             moves.ForEach(Console.WriteLine);
             Console.WriteLine("What move would you like to throw?");
-            choiceHuman = Console.ReadLine();
+            choice = Console.ReadLine();
         }
     }
 }

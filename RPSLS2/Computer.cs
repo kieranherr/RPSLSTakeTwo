@@ -9,7 +9,6 @@ namespace RPSLS2
     class Computer : PlayerParent
     {
         private Random rnd = new Random();
-        string choice;
         public override void ChooseGesture()
         {
             int num = rnd.Next(5);
