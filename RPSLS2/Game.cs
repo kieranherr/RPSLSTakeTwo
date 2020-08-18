@@ -16,18 +16,19 @@ namespace RPSLS2
         }
        public void SecondPlayer()
         {
-            Console.WriteLine("Would you like to play against another human or a CPU?");
-            string ans = Console.ReadLine();
+            Console.WriteLine("Enter 1 to play against another Human.");
+            Console.WriteLine("Enter 2 to play against a Computer");
+            int ans = Convert.ToInt32(Console.ReadLine());
             switch (ans)
             {
-                case "Human":
+                case 1:
                     player2 = new Human();
                     break;
-                case "CPU":
+                case 2:
                     player2 = new Computer();
                     break;
                 default:
-                    Console.WriteLine("Please enter either Human or CPU");
+                    Console.WriteLine("Please enter either 1 for a Human or 2 for a Computer");
                     break;
             }
         }
